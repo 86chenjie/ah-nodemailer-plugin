@@ -5,7 +5,6 @@
   "description": "nodemailer email plugin for actionhero API Server",
   "homepage": "https://github.com/panjiesw/ah-nodemailer-plugin",
   "scripts": {
-    "postinstall": "scripts/postinstall.js",
     "prepublish": "grunt dev",
     "postpublish": "grunt clean"
   },
