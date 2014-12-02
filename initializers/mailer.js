@@ -73,7 +73,8 @@ Mailer = function(api, next) {
       }).then(function(resolved) {
         options.mail.html = resolved[0];
         options.mail.text = resolved[1];
-        return Q.nfcall(api.Mailer.transport.sendMail, options.mail);
+        //return Q.nfcall(api.Mailer.transport.sendMail, options.mail);
+        return Q.ninvoke(api.Mailer.transport, 'sendMail', options.mail);
       }).nodeify(callback);
     }
   };
